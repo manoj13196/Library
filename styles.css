@@ -1,0 +1,126 @@
+#bookForm{
+    display:flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.input_fields{
+    display: flex;
+    flex-direction: column;
+   gap: 10px;
+}
+.checkbox{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#bookModel{
+    padding: 20px;
+    border-radius: 30px;
+    background-color: rgb(160, 160, 75);
+}
+
+.card{
+    background-color: rgb(160, 161, 105);
+    padding: 5px 20px 20px 20px;
+    border-radius: 20px;
+    
+}
+#library{
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    margin-top: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+input{
+    border: none;
+    border-radius: 10px;
+    width: 100%px;
+    height: 20px;
+}
+
+
+button{
+    border-radius: 10px;
+    border: 0.5px solid black;
+    padding: 5px 10px;
+}
+#newBookBtn{
+    background-color: rgb(129, 148, 44);
+    text-align: center;
+}
+#newBookBtn:hover{
+    background-color: rgb(91, 108, 16);
+    transform: scale(1.03);
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.5);
+    
+}
+button[type="submit"] {
+    background-color: green;
+    color: white;
+}
+button[type="submit"]:hover {
+    background-color: rgb(6, 151, 6);
+    color: white;
+    transform: scale(1.03);
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.5);
+}
+
+button[type="button"] {
+    background-color: red;
+    color: white;
+}
+button[type="button"]:hover {
+    background-color: rgb(203, 16, 16);
+    color: white;
+    transform: scale(1.03);
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.5);
+}
+body{
+    background-color: rgb(118, 46, 106);
+}
+.removeBook{
+    background-color: red;
+}
+.removeBook:hover{
+    background-color: rgb(169, 15, 15);
+    transform: scale(1.03);
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.5);
+}
+
+.toggleRead{
+    background-color: beige;
+}
+.toggleRead:hover{
+    transform: scale(1.03);
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.5);
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.cardButton{
+    display: flex;
+    gap: 15px;
+}
+input:focus{
+    outline: none;
+    padding-left: 2px;
+}
+.addButton{
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+}
