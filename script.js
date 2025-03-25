@@ -81,8 +81,55 @@ document.getElementById("closeModel").addEventListener("click", ()=>{
     document.getElementById("bookModel").close();
 });
 
+
+function showError(input,message){
+    const errorSpan=document.getElementById(`${input.id}Error`);
+    errorSpan.textContent=message;
+    input.classList.add("invalid");
+
+}
+
+function clearError(input){
+    const errorSpan=document.getElementById(`${input.id}Error`);
+    errorSpan.textContent="";
+    input.classList.remove("invalid");
+}
+
+
+function validateField(input){
+    if(input.validity.valueMissing){
+        showError(input,`${input.name} is required`);
+        return false;
+    }
+    if(input.id==="pages" && input.value<1){
+        showError(input,`page must be atleast 1`);
+        return false;
+    }
+
+    clearError(input);
+    return true;
+    
+}
+
+const inputs=document.querySelectorAll("#bookForm input[type='text'] , #bookForm input[type='number']");
+inputs.forEach((input)=>{
+    input.addEventListener("input",()=>validateField(input));
+
+    input.addEventListener("blur",()=>validateField(input));
+});
+
+
+
 document.getElementById("bookForm").addEventListener("submit", function(e){
     e.preventDefault();
+
+    const isTitleValid=validateField(document.getElementById("title"));
+    const isAuthorValid = validateField(document.getElementById("author"));
+    const isPagesValid = validateField(document.getElementById("pages"));
+
+    if(!isTitleValid||!isPagesValid||!isAuthorValid){
+        return;
+    }
 
     const title=document.getElementById("title").value;
     const author = document.getElementById("author").value;

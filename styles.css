@@ -105,6 +105,7 @@ body{
     display: flex;
     flex-direction: column;
     gap: 10px;
+   
 }
 .cardButton{
     display: flex;
@@ -124,3 +125,17 @@ input:focus{
     display: flex;
     justify-content: center;
 }
+input:invalid {
+    border: 2px solid red;
+  }
+  
+  input:valid {
+    border: 2px solid green;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 0.8em;
+    height: 1em;
+  }
+  
